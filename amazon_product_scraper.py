@@ -179,8 +179,8 @@ def scrape_amazon_product(asin):
                 variant_type = row_id.replace('inline-twister-row-', '')
                 variant_options = []
                 
-                # Get the variant options
-                options = row.find_all('li', class_='inline-twister-swatch')[:5]  # Limit to first 5 options
+                # Get all variant options
+                options = row.find_all('li', class_='inline-twister-swatch')  # Get all options
                 
                 for option in options:
                     # Try to get variant value from image alt attribute
